@@ -1,0 +1,53 @@
+{
+  "npmScope": "nx-demo",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "MzUxY2NmZTMtMWEzNi00MmVjLWI1MDgtNjRiZjQ0M2E3ZGE1fHJlYWQtd3JpdGU=",
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "next-blog-nx": {
+      "tags": []
+    },
+    "next-blog-nx-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "next-blog-nx"
+      ]
+    },
+    "components": {
+      "tags": []
+    },
+    "components-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "components"
+      ]
+    }
+  }
+}
